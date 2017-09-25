@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test-cats": "mocha cats/",
-    "test-dogs": "mocha dogs/"
+    "test-dogs": "mocha dogs/",
     "test": "exit 0"
   }
 }
