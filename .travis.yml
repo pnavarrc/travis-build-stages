@@ -5,6 +5,9 @@ node_js:
 cache:
   directories:
   - node_modules
-script:
-  - yarn run test-cats
-  - yarn run test-dogs
+jobs:
+  include:
+    - stage: Test Dogs
+    - script: yarn run test-dogs
+    - stage: Test Cats
+    - script: yarn run test-cats
