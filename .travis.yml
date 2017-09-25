@@ -7,7 +7,8 @@ cache:
   - node_modules
 jobs:
   include:
-    - stage: "Test Dogs"
+    - stage: Test
     - script: yarn run test-dogs
-    - stage: "Test Cats"
     - script: yarn run test-cats
+    - stage: Deploy
+    - script: echo `date`
