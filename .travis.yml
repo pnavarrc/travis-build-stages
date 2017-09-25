@@ -5,6 +5,18 @@ node_js:
 cache:
   directories:
   - node_modules
-script:
-  - yarn run test-cats
-  - yarn run test-dogs
+  yarn: true
+jobs:
+  include:
+    - stage: test
+    - script:
+      - yarn run test-dogs
+    - script:
+      - yarn run test-cats
+    - stage: deploy
+    - script:
+      - echo `date`
+
+  stages:
+    - Test
+    - Deploy
