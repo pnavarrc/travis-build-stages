@@ -6,5 +6,15 @@
   "repository": "git@github.com:pnavarrc/travis-build-stages.git",
   "author": "Pablo Navarro <pnavarrc@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "ramda": "^0.24.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.3"
+  },
+  "scripts": {
+    "test-cats": "mocha cats/",
+    "test-dogs": "mocha dogs/"
+  }
 }
