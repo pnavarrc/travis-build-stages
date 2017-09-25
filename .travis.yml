@@ -8,8 +8,15 @@ cache:
   yarn: true
 jobs:
   include:
-    - stage: Test
-    - script: yarn run test-dogs
-    - script: yarn run test-cats
-    - stage: Deploy
-    - script: echo `date`
+    - stage: test
+    - script:
+      - yarn run test-dogs
+    - script:
+      - yarn run test-cats
+    - stage: deploy
+    - script:
+      - echo `date`
+
+  stages:
+    - Test
+    - Deploy
